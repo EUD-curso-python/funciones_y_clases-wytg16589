@@ -3,7 +3,7 @@ import random
 
 import pytest
 
-import funciones_y_clases as md
+import funciones_y_clases_solved as md
 
 def assert_attr(obj, attr):
     assert hasattr(obj, attr), 'Falta implementar "{}"'.format(attr)
