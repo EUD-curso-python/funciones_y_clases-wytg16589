@@ -28,7 +28,7 @@ def anio_bisiesto(year):
 
     pass
 
-def contar_valles():
+def contar_valles(l):
     r'''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
@@ -46,7 +46,11 @@ def contar_valles():
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    
+    nvalle=0
+    for a in l:
+      if a==0:
+        nvalle+=1
+    return nvalle
     pass
 
 def saltando_rocas():
@@ -116,5 +120,4 @@ def pares_medias():
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
-
 
