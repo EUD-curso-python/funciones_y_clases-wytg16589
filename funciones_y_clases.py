@@ -87,7 +87,19 @@ def pares_medias():
 # los elementos del atributo `lista` unidos a través de comas. Ejemplo:
 # si `lista` es [1,2,3,4], __str__ debe devolver '1,2,3,4'
 
+class ListaComa:
+    def __init__(self,l1):
+      self.l1=l1
+        
 
+    def __str__(self):
+      cadena=''
+      for i in self.l1:
+        if self.l1[len(self.l1)-1]==i:
+          cadena+=str(i)
+        else:
+          cadena+=str(i)+","
+      return cadena
 
 
 # Crear una clase llamada `Persona` que reciba en su constructor como 1er 
@@ -106,6 +118,27 @@ def pares_medias():
 # si `nombres` es ['Juan', 'David'] y `apellidos` es ['Torres', 'Salazar'],
 # el método `nombre completo` debe devolver  'Juan David Torres Salazar'
 
+class Persona:
+    def __init__(self,nombres,apellidos):
+        self.nombres=nombres
+        self.apellidos=apellidos
+
+    def nombre_completo(self):
+      cadena=''
+      cad_nom=''
+      cad_ape=''
+      for i in self.nombres:
+        if self.nombres[len(self.nombres)-1]==i:
+          cad_nom+=str(i).capitalize()
+        else:
+          cad_nom+=str(i).capitalize()+" "
+      for i in self.apellidos:
+        if self.apellidos[len(self.apellidos)-1]==i:
+          cad_ape+=str(i).capitalize()
+        else:
+          cad_ape+=str(i).capitalize()+" "
+      cadena=cad_nom+' '+cad_ape
+      return cadena
 
 
 
