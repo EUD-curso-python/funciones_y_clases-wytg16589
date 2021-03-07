@@ -3,6 +3,7 @@ import random
 
 import pytest
 
+
 import funciones_y_clases as md
 
 def assert_attr(obj, attr):
@@ -110,4 +111,5 @@ def test_Persona1(nombres, apellidos, fecha):
     try: ll = md.Persona1(nombres, apellidos, fecha)
     except: raise Exception('Clase "{}" genera error'.format(class_name))
     assert_attr(ll, 'edad')
+
     assert ll.edad() == fn3(fecha), 'Clase {} no es correcta'.format(class_name)

@@ -153,4 +153,12 @@ class Persona:
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
+from datetime import date
+class Persona1(Persona):
+  def __init__(self, nombres, apellidos, fecha_nacimiento):
+    Persona.__init__(self, nombres, apellidos)
+    self.fecha_nacimiento = fecha_nacimiento
 
+  def edad(self):
+    hoy=date.today()
+    return (hoy.year - self.fecha_nacimiento.year) - (1 if hoy < date(hoy.year,self.fecha_nacimiento.month, self.fecha_nacimiento.day) else 0)
